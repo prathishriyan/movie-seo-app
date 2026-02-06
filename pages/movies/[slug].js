@@ -195,20 +195,20 @@ export default function MoviePage({ movie, similarMovies, cast, crew }) {
           </h2>
 
           <div className="flex gap-4 overflow-x-auto no-scrollbar">
-  {similarMovies.map((m) => (
-    <Link key={m.id} href={`/movies/${slugify(m.title)}`}>
-      <div
-        className="
-          min-w-[160px]
-          bg-zinc-900
-          rounded-lg
-          overflow-hidden
-          transition
-          cursor-pointer
-          hover:scale-105
-          active:scale-95
-        "
-      >
+          {similarMovies.map((m) => (
+          <Link key={m.id} href={`/movies/${slugify(m.title)}`}>
+        <div
+            className="
+            min-w-[160px]
+            bg-zinc-900
+            rounded-lg
+            overflow-hidden
+            transition
+            cursor-pointer
+            hover:scale-105
+            active:scale-95
+            "
+        >
         {/* Poster */}
         <div className="h-[240px] bg-zinc-800">
           {m.poster_path ? (
