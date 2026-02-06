@@ -63,3 +63,31 @@ pages/
 
 styles/
  └── globals.css
+
+```
+
+---
+##⚙️ Environment Variables
+
+Create a .env.local file:
+
+```text
+TMDB_BEARER_TOKEN=your_tmdb_v4_bearer_token
+```
+
+---
+
+##▶️ Run Locally
+
+```text
+git clone https://github.com/prathishriyan/movie-seo-app.git
+cd movie-seo-app
+npm install
+npm run dev
+
+```
+Open:
+```text
+http://localhost:3000
+```
+---
