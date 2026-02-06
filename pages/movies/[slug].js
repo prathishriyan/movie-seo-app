@@ -195,30 +195,52 @@ export default function MoviePage({ movie, similarMovies, cast, crew }) {
           </h2>
 
           <div className="flex gap-4 overflow-x-auto no-scrollbar">
-            {similarMovies.map((m) => (
-              <Link
-                key={m.id}
-                href={`/movies/${slugify(m.title)}`}
-              >
-                <div className="min-w-[160px] bg-zinc-900 rounded-lg overflow-hidden border border-transparent hover:border-red-600 hover:scale-110 active:scale-95 transition cursor-pointer">
-                  {m.poster_path && (
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500${m.poster_path}`}
-                      alt={m.title}
-                    />
-                  )}
-                  <div className="p-2">
-                    <p className="text-sm truncate">
-                      {m.title}
-                    </p>
-                    <p className="text-xs text-gray-400">
-                      ⭐ {m.vote_average}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+  {similarMovies.map((m) => (
+    <Link key={m.id} href={`/movies/${slugify(m.title)}`}>
+      <div
+        className="
+          min-w-[160px]
+          bg-zinc-900
+          rounded-lg
+          overflow-hidden
+          transition
+          cursor-pointer
+          hover:scale-105
+          active:scale-95
+        "
+      >
+        {/* Poster */}
+        <div className="h-[240px] bg-zinc-800">
+          {m.poster_path ? (
+            <img
+              src={`https://image.tmdb.org/t/p/w500${m.poster_path}`}
+              alt={m.title}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <div className="h-full flex items-center justify-center text-zinc-500 text-sm">
+              No Image
+            </div>
+          )}
+        </div>
+
+        {/* Info */}
+        <div className="p-3">
+          <p className="text-sm font-medium truncate">
+            {m.title}
+          </p>
+
+          {m.vote_average > 0 && (
+            <p className="text-xs text-amber-400 mt-1">
+              ⭐ {m.vote_average.toFixed(1)}
+            </p>
+          )}
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
         </section>
       </main>
     </>
