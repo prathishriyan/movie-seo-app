@@ -67,7 +67,7 @@ styles/
 ```
 
 ---
-##⚙️ Environment Variables
+## ⚙️ Environment Variables
 
 Create a .env.local file:
 
@@ -77,7 +77,7 @@ TMDB_BEARER_TOKEN=your_tmdb_v4_bearer_token
 
 ---
 
-##▶️ Run Locally
+## ▶️ Run Locally
 
 ```text
 git clone https://github.com/prathishriyan/movie-seo-app.git
