@@ -91,3 +91,25 @@ Open:
 http://localhost:3000
 ```
 ---
+
+## 📌 Future Improvements
+
+- 🎞️ Trailer modal (YouTube embed)
+- ⏳ Skeleton loading animations
+- 🔄 Infinite scroll / pagination
+- 📺 TV shows support
+- ⭐ User watchlist
+
+---
+
+## 👤 Author
+
+Prathiksha Shriyan
+GitHub Link:
+
+```text
+https://github.com/prathishriyan
+```
+
+
+
