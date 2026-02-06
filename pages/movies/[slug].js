@@ -80,7 +80,7 @@ export default function MoviePage({ movie, similarMovies, cast, crew }) {
   return (
     <>
       <Head>
-        <title>{movie.title} | MovieFlix</title>
+        <title>MovieVerse | {movie.title}</title>
         <meta name="description" content={movie.overview} />
 
         <meta property="og:title" content={movie.title} />
